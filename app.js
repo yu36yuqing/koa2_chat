@@ -32,7 +32,7 @@ app.use(async (ctx, next) => {
   console.log(`${ctx.method} ${ctx.url} - ${ms}ms`)
 })
 
-//chat
+//socket ios chat logic
 const server = require('http').createServer(app.callback())
 const io = require('socket.io')(server)
 io.on('connection', function(socket) {
